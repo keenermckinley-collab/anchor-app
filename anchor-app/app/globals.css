@@ -1,0 +1,74 @@
+:root {
+  --anchor-blue: #011e41;
+  --anchor-green: #3bbfad;
+  --text: #0f243f;
+  --muted: #4f6074;
+  --border: #d7e0ea;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: linear-gradient(165deg, #f6fbff 0%, #eef5fb 55%, #f8fcff 100%);
+}
+
+.shell { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+.topbar { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; }
+.nav { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.logo { font-weight: 800; letter-spacing: 0.08em; color: var(--anchor-blue); }
+.navLinks { display: flex; gap: 14px; flex-wrap: wrap; }
+.navLinks a { color: var(--anchor-blue); text-decoration: none; font-size: 0.95rem; }
+
+main { padding: 32px 0 64px; }
+.panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(1, 30, 65, 0.06);
+}
+
+h1, h2 { color: var(--anchor-blue); margin-top: 0; }
+p { line-height: 1.6; }
+.small { color: var(--muted); }
+.callout {
+  border-left: 4px solid var(--anchor-green);
+  background: #eefbf8;
+  padding: 12px 14px;
+  border-radius: 8px;
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.btn {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--anchor-blue);
+  color: var(--anchor-blue);
+  font-weight: 600;
+  background: #fff;
+}
+.btn.primary { background: var(--anchor-blue); color: #fff; }
+
+label { font-weight: 600; display: block; margin-top: 14px; }
+input, textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #bfd0e0;
+  font: inherit;
+}
+textarea { min-height: 100px; }
+
+.footer { border-top: 1px solid var(--border); background: #fff; }
+.footerInner { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--muted); }
+.footerInner a { color: var(--anchor-blue); text-decoration: none; }
+
+@media (max-width: 680px) {
+  .nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+}
